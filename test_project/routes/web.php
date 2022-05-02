@@ -26,3 +26,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::resource('users', \App\Http\Controllers\UserController::class);
+Route::resource('orders', \App\Http\Controllers\OrderController::class);
