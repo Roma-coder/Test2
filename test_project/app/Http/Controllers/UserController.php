@@ -17,9 +17,25 @@ class UserController extends Controller
         return $request->perform();
     }
 
-    public function create(CreateUserRequest $request)
+    public function create()
+    {
+        return view('users.create');
+    }
+
+    public function store(CreateUserRequest $request)
     {
         return $request->perform();
+    }
+
+
+    public function show(User $user)
+    {
+        return view('users.show', compact('user'));
+    }
+
+    public function edit(User $user)
+    {
+        return view('users.edit', compact('user'));
     }
 
     public function update(UpdateUserRequest $request, User $user)
