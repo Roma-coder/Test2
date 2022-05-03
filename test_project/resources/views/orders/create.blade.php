@@ -24,7 +24,7 @@
                             <label for="user_id" class="block font-medium text-sm text-gray-700">User</label>
                             <select class="form-input rounded-md shadow-sm mt-1 block w-full" name="user_id">
 
-                                @foreach ($orders as $key => $value)
+                                @foreach ($users as $key => $value)
                                     <option value="{{ $key }}">
                                         {{ $value }}
                                     </option>
