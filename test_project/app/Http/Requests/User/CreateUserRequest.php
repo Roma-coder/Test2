@@ -14,7 +14,7 @@ class CreateUserRequest extends FormRequest
      */
     public function authorize()
     {
-        return auth()->check();
+        return true;
     }
 
     /**
@@ -26,7 +26,10 @@ class CreateUserRequest extends FormRequest
     {
         return [
             'first_name'=>'required|string',
-            'last_name'=>'required|string'
+            'last_name'=>'required|string',
+            'email'=>'required|string',
+            'password'=>'required|string'
+
         ];
     }
 
